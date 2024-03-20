@@ -18,15 +18,42 @@ class App extends StatelessWidget {
     // scaffold는 navigation bar를 구현할 수 있도록 해주고, buttom tab bar나 상단 버튼, 화면 중앙 정렬 등과 같은 것을 담당함
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blue, // 파란색으로 설정
-          title: Text('Hello flutter!'),
-          centerTitle: true,
-        ),
-        body: Center(
-          child: Text('Hello world'!),
-        ),
-      ),
+          backgroundColor: Color(0xFF181818),
+          body: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 40),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: 80,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Hey, Selena',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 38,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                        Text(
+                          'Welcome back',
+                          style: TextStyle(
+                            color: Colors.white.withOpacity(0.8),
+                            fontSize: 18,
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                )
+              ],
+            ),
+          )),
     );
   }
 }
