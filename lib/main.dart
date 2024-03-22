@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 // 개념 정리
 // constant(상수): 절대 변하지 않는 변수 + 컴파일 전에 value를 사전에 알 수 있는 변수
+// code actions: 코드를 매우 간단한 방법으로 리팩토링 하도록 해줌
 
 void main() {
   runApp(const App());
