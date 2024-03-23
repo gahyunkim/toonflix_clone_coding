@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toonflix/widgets/Button.dart';
 
 // 개념 정리
 // constant(상수): 절대 변하지 않는 변수 + 컴파일 전에 value를 사전에 알 수 있는 변수
@@ -79,31 +80,19 @@ class App extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                const SizedBox(
-                  height: 30,
-                ),
-                Row(
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(45),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 20,
-                          horizontal: 50,
-                        ),
-                        child: Text(
-                          "Transfer",
-                          style: TextStyle(
-                            fontSize: 20,
-                          ),
-                        ),
-                      ),
-                    )
+                    Button(
+                        text: 'Transfer',
+                        bgColor: Color(0xFFF1B33B),
+                        textColor: Colors.black),
+                    Button(
+                        text: 'Request',
+                        bgColor: Color(0xFF1F2123),
+                        textColor: Colors.white),
                   ],
-                )
+                ),
               ],
             ),
           )),
