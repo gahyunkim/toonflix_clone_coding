@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toonflix/widgets/Button.dart';
+import 'package:toonflix/widgets/card.dart';
 
 // 개념 정리
 // constant(상수): 절대 변하지 않는 변수 + 컴파일 전에 value를 사전에 알 수 있는 변수
@@ -120,68 +121,19 @@ class App extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Container(
-                  clipBehavior: Clip.hardEdge,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF1F2123),
-                    borderRadius: BorderRadius.circular(25),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(30),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text(
-                              'Euro',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 32,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Row(
-                              children: [
-                                const Text(
-                                  '6 428',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 5,
-                                ),
-                                Text(
-                                  'EUR',
-                                  style: TextStyle(
-                                    color: Colors.white.withOpacity(0.8),
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                        Transform.scale(
-                          scale: 2.2,
-                          child: Transform.translate(
-                            offset: const Offset(-5, 12),
-                            child: const Icon(
-                              Icons.euro_rounded,
-                              color: Colors.white,
-                              size: 88,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
+                const CurrencyCard(
+                  name: "Euro",
+                  code: "EUR",
+                  amount: '6 428',
+                  icon: Icons.euro_rounded,
+                  isInverted: false,
+                ),
+                const CurrencyCard(
+                  name: 'Bitcoin',
+                  code: "BTC",
+                  amount: '9 785',
+                  icon: Icons.currency_bitcoin,
+                  isInverted: true,
                 ),
               ],
             ),
