@@ -59,7 +59,9 @@ class CurrencyCard extends StatelessWidget {
                     Text(
                       code,
                       style: TextStyle(
-                        color: Colors.white.withOpacity(0.8),
+                        color: isInverted
+                            ? _blackColor
+                            : Colors.white.withOpacity(0.8),
                         fontSize: 20,
                       ),
                     ),
@@ -82,6 +84,5 @@ class CurrencyCard extends StatelessWidget {
         ),
       ),
     );
-    throw UnimplementedError();
   }
 }
