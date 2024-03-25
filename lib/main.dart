@@ -14,7 +14,12 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   int counter = 0;
   void onClicked() {
-    counter += 1;
+    // State Class에게 데이터가 변경되었다고 알리는 함수
+    // 데이터의 변화는 무조건 setState에 넣어줘야 함
+    // setState는 Dart를 깨우고 다시 build를 실행시켜서 새롱ㄴ 데이터를 UI에 반영함
+    setState(() {
+      counter += 1;
+    });
   }
 
   @override
