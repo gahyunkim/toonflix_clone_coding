@@ -78,6 +78,7 @@ class _MyLargeTitleState extends State<MyLargeTitle> {
   // 거의 대부분의 상황에서 이 메소드가 필요하지는 않음
 
   // 종종 API에서 업데이트 하고 싶은 경우 + initState 메소드가 항상 build보다 먼저 호출되어야 함
+  // initState에서 우리는 변수를 초기화하고, API 업데이트를 구독할 수 있게 함
   @override
   void initState() {
     super.initState();
@@ -88,6 +89,8 @@ class _MyLargeTitleState extends State<MyLargeTitle> {
   // dipose는 위젯이 스크린에서 제거될 때 호출되는 메소드
   // API 업데이트나 이벤트 리스너로부터 구독을 취소하거나, form의 리스터노부터 벗어나고 싶을때 사용할 수 있음
   // => 무엇으로부터 벗어나고 싶을 때 사용함
+
+  // 우리의 위젯이 위젯 트리에서 제거될 때는 dispose메소드가 실행됨 => 메소드 안에서 이벤트 리스너와 같은 것들을 구독 취소함
   @override
   void dispose() {
     super.dispose();
