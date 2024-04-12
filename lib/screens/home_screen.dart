@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
             flex: 1,
             child: Container(
               decoration: const BoxDecoration(
-                color: Colors.red,
+                color: Colors.blue,
               ),
             ),
           )
